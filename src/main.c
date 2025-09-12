@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include "libs/http.h"
-#include "weather.h"
 
 int main()
 {
@@ -9,7 +8,7 @@ int main()
     welcomeUser();
 
     httpStruct h;
-    h.temp = false;
+    h.temp = false;    
     if(weather(&h) != 0)
     { 
         printf("Failed to get weather link.\n");

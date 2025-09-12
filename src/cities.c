@@ -25,11 +25,11 @@ const char *cities =                                /*Can I move this into its o
 void listCities(void) 
 {
     const char* search = cities;
-    char name[50];
+    char name[20];
 
     while (*search != '\0') 
     {
-        sscanf(search, "%49[^:]", name);
+        sscanf(search, "%19[^:]", name);
         printf("%s\n", name);
 
         search = strchr(search, '\n');
@@ -41,10 +41,10 @@ void listCities(void)
 
 int findCity(const char* choice, double* lat, double* lon) {
     const char* search = cities;
-    char name[50];
+    char name[20];
 
     while (*search != '\0') {
-        sscanf(search, "%49[^:]:%lf:%lf", name, lat, lon);
+        sscanf(search, "%19[^:]:%lf:%lf", name, lat, lon);
 
         if (strcmp(choice, name) == 0) {
             return 1;

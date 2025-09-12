@@ -5,8 +5,8 @@ extern const char *cities;
 
 typedef struct                              /*I need to use a struct for a cleaner code*/
 {
-    char name[50];
-    char listName[50];
+    char name[25];
+    char listName[25];
     double latitude;
     double longitude;
     char url[250];

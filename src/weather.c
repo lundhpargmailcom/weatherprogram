@@ -3,7 +3,6 @@
 #include <string.h>
 #include <ctype.h>
 #include "cities.h"
-#include "weather.h"
 #include "libs/http.h"
 
 void welcomeUser()
@@ -18,13 +17,13 @@ int weather(httpStruct* h)
     
     listCities();
 
-    char choice[50];
+    char choice[20];
     double lat, lon;
 
     while(1)
     {
         printf("\nSelect a city (Or type 'exit' to end the program): ");
-        scanf("%49s", choice);
+        scanf("%19s", choice);
 
         
         if (strcmp(choice, "exit") == 0) 
