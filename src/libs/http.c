@@ -6,7 +6,7 @@
 
 size_t got_data(char *buffer, size_t itemsize, size_t nitems, void* ignorethis){				/*Implementing the code from the video about libcurl to collect the data*/
 	size_t bytes = itemsize + nitems;
-	size_t linenumber = 1;
+	size_t linenumber = 1;																		/*Maybe I do no need this (linenumber), as of now I don't even output the data anyway.*/
 	size_t i;
 	printf("New chunk (%zu bytes)\n", bytes);
 	for(i = 0; i < bytes; i++){
