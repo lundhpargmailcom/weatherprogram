@@ -1,20 +1,14 @@
-#ifndef __http_
-#define __http_
+#ifndef HTTP_H
+#define HTTP_H
 
-#include <stdbool.h>
+#include <stddef.h>
 
-typedef struct
+typedef struct 
 {
-    bool temp;
-    char url[200];
-} httpStruct;
+    char *data;
+    size_t size;
+} JasonInfo;
 
-int http_init(httpStruct *h);
-
-void welcomeUser();                     /*Cleaned this up a bit, I used to have three header-files, but that felt a bit excessive*/
-
-int weather(httpStruct* h);
-
-/*void http_dispose(httpStruct *h);*/           /*Not really sure what to do with this*/
+int getWeatherData(const char *url, JasonInfo *response);
 
 #endif
