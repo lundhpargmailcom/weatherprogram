@@ -52,7 +52,7 @@ int listCities(const char *data, cityStruct *cities, int maxCities)
             cities[count].longitude = lon;
 
             snprintf(cities[count].url, sizeof(cities[count].url), 
-                "https://api.open-meteo.com/v1/forecast?latitude=%lf&longitude=%lf&current_weather=true", lat, lon);
+                "https://api.open-meteo.com/v1/forecast?latitude=%.4lf&longitude=%.4lf&current_weather=true", lat, lon);
             count++;
 
         } else 
