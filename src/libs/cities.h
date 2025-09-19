@@ -1,5 +1,5 @@
-#ifndef DATA_H
-#define DATA_H
+#ifndef CITIES_H
+#define CITIES_H
 
 #define MAX_CITIES 20
 

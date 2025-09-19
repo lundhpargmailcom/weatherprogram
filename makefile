@@ -12,7 +12,7 @@ BUILD_DIR := build
 
 # Flaggor: standard, varningar, optimering + auto-dep för headers 
 # Detta är en enkel variabel definition
-CFLAGS := -std=c90 -Wall -Wextra -MMD -MP
+CFLAGS := -std=c99 -Wall -Wextra -MMD -MP
 
 # Länkarflaggor
 # Detta är en enkel variabel definition
@@ -20,7 +20,7 @@ LDFLAGS := -flto -Wl,--gc-sections
 
 # Bibliotek att länka mot
 # Detta är en enkel variabel definition
-LIBS := -lcurl
+LIBS := -lcurl -lcjson
 
 # Hittar alla .c filer rekursivt i katalogen.
 #Den anropar 'find' kommandot i Linux och formaterar resultatet som en lista på sökvägar med mellanslag mellan varje
